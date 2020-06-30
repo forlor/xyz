@@ -29,7 +29,7 @@
     <groupId>org.xyz</groupId>
     <artifactId>xyz</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <description></description>
+    <description>测试git</description>
     <properties>
         <spring.version>2.3.0.RELEASE</spring.version>
         <project.version>1.0-SNAPSHOT</project.version>
