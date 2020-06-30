@@ -1,0 +1,10 @@
+spring:
+  data:
+    elasticsearch:
+      cluster-name: my-application
+      cluster-nodes: 192.168.2.35:9300 # 程序连接es的端口号是9300
+  elasticsearch:
+    rest:
+      uris: 192.168.2.35:9200
+
+
