@@ -6,19 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="test" />
-        <module name="dubbo" />
-        <module name="jdk" />
-        <module name="log" />
-        <module name="rxjava" />
-        <module name="kafka" />
         <module name="spring-mvc" />
-        <module name="hibernate" />
+        <module name="log" />
         <module name="redis" />
-        <module name="zookeeper" />
         <module name="spi" />
+        <module name="jdk" />
+        <module name="dubbo" />
+        <module name="test" />
         <module name="undertow" />
+        <module name="zookeeper" />
+        <module name="collectHardwareInfo" />
+        <module name="quartz" />
+        <module name="rxjava" />
+        <module name="hibernate" />
         <module name="elasticsearch" />
+        <module name="kafka" />
       </profile>
       <profile name="Annotation profile for xyz" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -45,6 +47,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="collectHardwareInfo" options="-parameters" />
       <module name="dubbo" options="-parameters" />
       <module name="elasticsearch" options="-parameters" />
       <module name="hibernate" options="-parameters" />
@@ -52,6 +55,7 @@
       <module name="kafka" options="-parameters" />
       <module name="log" options="-parameters" />
       <module name="mapstruct" options="-parameters" />
+      <module name="quartz" options="-parameters" />
       <module name="redis" options="-parameters" />
       <module name="rxjava" options="-parameters" />
       <module name="spi" options="-parameters" />

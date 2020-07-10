@@ -19,6 +19,8 @@
         <module>log</module>
         <module>hibernate</module>
         <module>spi</module>
+        <module>collectHardwareInfo</module>
+        <module>quartz</module>
     </modules>
     <parent>
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter -->
