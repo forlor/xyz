@@ -1,16 +1,13 @@
 package org.xyz.quartz;
 
-import org.quartz.JobBuilder;
-import org.quartz.JobDetail;
-import org.quartz.Scheduler;
-import org.quartz.SchedulerException;
-import org.quartz.SimpleScheduleBuilder;
-import org.quartz.SimpleTrigger;
-import org.quartz.TriggerBuilder;
-import org.quartz.impl.StdSchedulerFactory;
-import org.xyz.quartz.job.MyJob;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.jdbc.core.JdbcTemplate;
 
-import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @ClassName AppMain
@@ -19,14 +16,17 @@ import java.util.Date;
  * @Date 2020/7/10 9:57
  * @Version 1.0
  **/
-public class AppMain {
-    public static void main(String[] args) throws SchedulerException {
-        JobDetail build = JobBuilder.newJob(MyJob.class).withIdentity("xyzJob", "xyz").build();
-        SimpleTrigger build1 = TriggerBuilder.newTrigger().startNow().withIdentity("xyzTrigger", "xyz").withSchedule(SimpleScheduleBuilder.repeatSecondlyForTotalCount(10, 5))
-                .build();
-        Scheduler defaultScheduler = StdSchedulerFactory.getDefaultScheduler();
-        defaultScheduler.scheduleJob(build, build1);
-        defaultScheduler.start();
+@SpringBootApplication
+public class AppMain implements CommandLineRunner {
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
+    public static void main(String[] args) {
+        SpringApplication.run(AppMain.class, args);
     }
 
+    @Override
+    public void run(String... args) throws Exception {
+        List<Map<String, Object>> maps = jdbcTemplate.queryForList("select * from xyz");
+        System.out.println(maps);
+    }
 }
