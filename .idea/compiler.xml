@@ -6,21 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-mvc" />
         <module name="log" />
         <module name="redis" />
-        <module name="spi" />
         <module name="jdk" />
-        <module name="dubbo" />
-        <module name="test" />
-        <module name="undertow" />
         <module name="zookeeper" />
-        <module name="collectHardwareInfo" />
-        <module name="quartz" />
-        <module name="rxjava" />
-        <module name="hibernate" />
-        <module name="elasticsearch" />
         <module name="kafka" />
+        <module name="collectHardwareInfo" />
+        <module name="undertow" />
+        <module name="quartz" />
+        <module name="test" />
+        <module name="hibernate" />
+        <module name="rxjava" />
+        <module name="spring-mvc" />
+        <module name="elasticsearch" />
+        <module name="dubbo" />
+        <module name="spi" />
       </profile>
       <profile name="Annotation profile for xyz" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
