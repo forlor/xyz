@@ -1,4 +1,4 @@
-package org.xyz.quartz.config;
+package org.xyz.quartz.common;
 
 import com.cronutils.builder.CronBuilder;
 import com.cronutils.model.definition.CronDefinitionBuilder;
@@ -10,13 +10,14 @@ import static com.cronutils.model.field.expression.FieldExpressionFactory.on;
 import static com.cronutils.model.field.expression.FieldExpressionFactory.questionMark;
 
 /**
- * @ClassName CronUtil
+ * @ClassName QuartzUtil
  * @Description TODO
  * @Author xyz
- * @Date 2020/7/13 11:50
+ * @Date 2020/7/14 18:27
  * @Version 1.0
  **/
-public class CronUtil {
+public class QuartzUtil {
+
     /**
      * 根据日期生成cron表达式
      *
@@ -54,15 +55,5 @@ public class CronUtil {
             return always();
         }
         return on(field);
-    }
-
-
-    public static void main(String[] args) {
-        CronDate cronDate = new CronDate();
-        cronDate.setMinute(50);
-        cronDate.setHour(3);
-        cronDate.setDayOfWeek(6);
-        String cron = cron(cronDate);
-
     }
 }

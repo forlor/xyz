@@ -1,6 +1,5 @@
-package org.xyz.quartz.config;
+package org.xyz.quartz.common;
 
-import org.quartz.JobDetail;
 import org.quartz.spi.TriggerFiredBundle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;

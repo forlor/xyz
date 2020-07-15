@@ -1,4 +1,4 @@
-package org.xyz.quartz.config;
+package org.xyz.quartz.common;
 
 /**
  * @ClassName CronEntity

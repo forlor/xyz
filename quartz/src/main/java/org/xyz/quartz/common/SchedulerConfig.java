@@ -1,4 +1,4 @@
-package org.xyz.quartz.config;
+package org.xyz.quartz.common;
 
 import org.quartz.Scheduler;
 import org.quartz.spi.JobFactory;

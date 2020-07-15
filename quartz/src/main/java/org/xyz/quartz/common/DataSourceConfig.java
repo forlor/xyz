@@ -1,6 +1,5 @@
-package org.xyz.quartz.config;
+package org.xyz.quartz.common;
 
-import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
