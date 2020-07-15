@@ -23,6 +23,7 @@ public class DataSourceConfig {
         hikariDataSource.setUsername("root");
         hikariDataSource.setJdbcUrl("jdbc:mysql://192.168.6.133:3306/xyz?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC");
         hikariDataSource.setPassword("root");
+
         return hikariDataSource;
     }
 }
